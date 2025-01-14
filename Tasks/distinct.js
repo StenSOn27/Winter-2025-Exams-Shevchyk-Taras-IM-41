@@ -1,9 +1,10 @@
 "use strict";
 
 // Return an array without duplicates
-distinct = (data) => {
-  uniqueElements = new Set();
-  index = 0;
+const distinct = (data) => {
+  const uniqueElements = new Set();
+  let index = 0;
+  
   data.forEach((element) => {
     if (uniqueElements.has(element)) {
       delete data[index];
@@ -12,8 +13,7 @@ distinct = (data) => {
     }
     index++;
   });
-  return data.filter
-  (x => typeof x === 'number');
+  return data.filter(x => typeof x === 'number');
 };
 
 module.exports = distinct;
