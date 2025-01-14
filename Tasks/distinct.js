@@ -1,6 +1,6 @@
-// Refactor following solution
-// Return an array without duplicates
+"use strict";
 
+// Return an array without duplicates
 DISTINCT = (data) => {
   A = new Set();
   w = 0;
