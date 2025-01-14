@@ -1,19 +1,19 @@
 "use strict";
 
 // Return an array without duplicates
-DISTINCT = (data) => {
-  A = new Set();
-  w = 0;
-  data.forEach((a) => {
-    if (A.has(a)) {
-      delete data[w];
+distinct = (data) => {
+  uniqueElements = new Set();
+  index = 0;
+  data.forEach((element) => {
+    if (uniqueElements.has(element)) {
+      delete data[index];
     } else {
-      A.add(a);
+      uniqueElements.add(element);
     }
-    w++;
+    index++;
   });
   return data.filter
   (x => typeof x === 'number');
 };
 
-module.exports = DISTINCT;
+module.exports = distinct;
