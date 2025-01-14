@@ -7,8 +7,8 @@ let compareDictionaries = (firstDict, secondDict) => {
   let secondKeys = Object.keys(secondDict);
   
   if (firstKeys.length !== secondKeys.length) return false;
-  for (let key of firstKeys) {
-    if (firstDict[key] === secondDict[key]) return false
+  for (let i = 0; i < firstKeys.length; i++) {
+    if (firstDict[firstKeys[i]] !== secondDict[secondKeys[i]]) return false;
   }
   return true;
 };
