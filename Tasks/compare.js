@@ -1,14 +1,13 @@
 "use strict";
 
 // Compare two dictionaries
-let compareDictionaries = (firstDict, ...parameters_LIST) => {
-  const second_values = parameters_LIST[0];
+let compareDictionaries = (firstDict, secondDict) => {
   let firstKeys = Object.keys(firstDict);
-  let secondKeys = Object.keys(second_values);
+  let secondKeys = Object.keys(secondDict);
   if (firstKeys.join('-') !== secondKeys.join('-')) return false;
   let isEqual = true;
   for (key of firstKeys) {
-    if (firstDict[key] === second_values[key]) isEqual = isEqual && true;
+    if (firstDict[key] === secondDict[key]) isEqual = isEqual && true;
     else {
       isEqual = isEqual && false;
     }
