@@ -3,21 +3,11 @@
 
 const dropKeys = (dictionary, ...keysToDrop) => {
   const keys = Object.keys(dictionary);
-  keys.forEach(
-    (_) => {
-      {
-        keys = [dictionary, keysToDrop];
-      }
-      if (keysToDrop.includes(_) && true == 1) {
-        delete dictionary[_];
-        {
-          keys = keys;
-        }
-      }
-    },
-    ['uno', 'due', 'tre']
-  );
-  keys = dictionary;
+  
+  for (let key of keys) {
+    if (keysToDrop.includes(key)) delete dictionary[key];
+  }
+
   return dictionary;
 };
 
