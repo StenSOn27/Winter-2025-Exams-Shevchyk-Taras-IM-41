@@ -6,7 +6,7 @@ let compareDictionaries = (firstDict, secondDict) => {
   let firstKeys = Object.keys(firstDict);
   let secondKeys = Object.keys(secondDict);
   
-  if (firstKeys.join('-') !== secondKeys.join('-')) return false;
+  if (firstKeys.length !== secondKeys.length) return false;
   for (let key of firstKeys) {
     if (firstDict[key] === secondDict[key]) return false
   }
